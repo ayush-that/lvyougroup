@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -6,10 +7,41 @@ import { SERVICES } from '@/lib/constants';
 import { useUIStore } from '@/store/ui.store';
 import { cn } from '@/lib/utils';
 
+const AUTO_CHANGE_INTERVAL = 5000; // 5 seconds
+
 export function Services() {
   const { activeService, setActiveService } = useUIStore();
   const selectedService = SERVICES.find((s) => s.id === activeService) || SERVICES[0];
   const activeIndex = SERVICES.findIndex((s) => s.id === activeService);
+
+  // Refs for measuring button positions
+  const navRef = useRef<HTMLElement>(null);
+  const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const [indicatorStyle, setIndicatorStyle] = useState({ top: 0, height: 0 });
+
+  // Update indicator position when active service changes
+  useEffect(() => {
+    const activeButton = buttonRefs.current[activeIndex];
+    if (activeButton && navRef.current) {
+      const navRect = navRef.current.getBoundingClientRect();
+      const buttonRect = activeButton.getBoundingClientRect();
+      setIndicatorStyle({
+        top: buttonRect.top - navRect.top,
+        height: buttonRect.height,
+      });
+    }
+  }, [activeIndex]);
+
+  // Auto-change service every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const currentIndex = SERVICES.findIndex((s) => s.id === activeService);
+      const nextIndex = (currentIndex + 1) % SERVICES.length;
+      setActiveService(SERVICES[nextIndex].id);
+    }, AUTO_CHANGE_INTERVAL);
+
+    return () => clearInterval(interval);
+  }, [activeService, setActiveService]);
 
   return (
     <section id="services" className="bg-bg-main py-20 lg:py-28">
@@ -28,14 +60,17 @@ export function Services() {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
             {/* Left Column - Service Navigation with animated indicator */}
             <div className="lg:w-[280px] flex-shrink-0">
-              <nav className="relative flex flex-row lg:flex-col gap-0 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0">
+              <nav
+                ref={navRef}
+                className="relative flex flex-row lg:flex-col gap-0 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0"
+              >
                 {/* Animated blue indicator bar */}
                 <motion.div
                   className="hidden lg:block absolute left-0 w-[3px] bg-teal-dark rounded-full"
                   initial={false}
                   animate={{
-                    top: activeIndex * 52,
-                    height: 52,
+                    top: indicatorStyle.top,
+                    height: indicatorStyle.height,
                   }}
                   transition={{
                     type: 'spring',
@@ -47,12 +82,13 @@ export function Services() {
                 {/* Static track line */}
                 <div className="hidden lg:block absolute left-0 top-0 w-[3px] h-full bg-border-subtle/50 rounded-full" />
 
-                {SERVICES.map((service) => (
+                {SERVICES.map((service, index) => (
                   <button
                     key={service.id}
+                    ref={(el) => { buttonRefs.current[index] = el; }}
                     onClick={() => setActiveService(service.id)}
                     className={cn(
-                      'relative text-left pl-6 pr-4 py-3.5 whitespace-nowrap lg:whitespace-normal',
+                      'relative text-left pl-5 pr-4 py-3 whitespace-nowrap lg:whitespace-normal',
                       'text-sm transition-all duration-200',
                       activeService === service.id
                         ? 'text-text-primary font-medium'
