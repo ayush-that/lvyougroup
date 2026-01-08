@@ -18,7 +18,7 @@
 
   /* Typography */
   --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Playfair Display", Georgia, serif;
 }
 
 /* Typography Base Styles */
