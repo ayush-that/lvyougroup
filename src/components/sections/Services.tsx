@@ -1,7 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { SectionHeading } from '@/components/common';
-import { SERVICES, IMAGES } from '@/lib/constants';
+import { SERVICES } from '@/lib/constants';
 import { useUIStore } from '@/store/ui.store';
 import { cn } from '@/lib/utils';
 
@@ -53,9 +53,9 @@ export function Services() {
             <div className="flex-1 relative">
               <div className="aspect-[16/10] overflow-hidden rounded-lg">
                 <img
-                  src={IMAGES.servicesConsultation}
-                  alt="Strategic consulting session"
-                  className="w-full h-full object-cover"
+                  src={selectedService.image}
+                  alt={selectedService.title}
+                  className="w-full h-full object-cover transition-opacity duration-300"
                 />
               </div>
             </div>

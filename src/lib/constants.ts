@@ -14,8 +14,14 @@ export const IMAGES = {
   innovators: 'https://images.unsplash.com/photo-1553484771-371a605b060b?w=800&q=80',
   investors: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80',
   partners: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80',
-  servicesConsultation: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=80',
   ctaBackground: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80',
+  // Service images
+  paymentSystems: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=80',
+  blockchain: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1200&q=80',
+  goldSilver: 'https://images.unsplash.com/photo-1610375461246-83df859d849d?w=1200&q=80',
+  oilGas: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=80',
+  investmentPartnership: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80',
+  strategicAdvisory: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80',
 };
 
 export const VALUES: ValueCard[] = [
@@ -74,31 +80,37 @@ export const SERVICES: Service[] = [
     id: 'payment-systems',
     title: 'Payment Systems & Ecosystems',
     description: 'End-to-end consulting for payment infrastructure, digital wallets, cross-border transactions, and fintech ecosystem integration.',
+    image: IMAGES.paymentSystems,
   },
   {
     id: 'blockchain-solutions',
     title: 'Blockchain Solutions',
     description: 'Real-world blockchain applications—from supply chain transparency to tokenized assets—designed for practical business outcomes, not hype.',
+    image: IMAGES.blockchain,
   },
   {
     id: 'gold-silver',
     title: 'Gold & Silver Commodities',
     description: 'Strategic advisory on precious metals investment, sourcing partnerships, and portfolio allocation for wealth preservation.',
+    image: IMAGES.goldSilver,
   },
   {
     id: 'oil-gas',
     title: 'Oil & Gas Commodities',
     description: 'Expert guidance on energy sector investments, trading strategies, and partnership structures in the oil and gas markets.',
+    image: IMAGES.oilGas,
   },
   {
     id: 'family-office',
     title: 'Investment Partnerships',
     description: 'For qualified opportunities, we co-invest alongside our clients—putting our capital behind our recommendations.',
+    image: IMAGES.investmentPartnership,
   },
   {
     id: 'strategic-advisory',
     title: 'Strategic Advisory',
     description: 'High-level consulting for businesses navigating complex decisions in payments, blockchain adoption, or commodity market entry.',
+    image: IMAGES.strategicAdvisory,
   },
 ];
 
