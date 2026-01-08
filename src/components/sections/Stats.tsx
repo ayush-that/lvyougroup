@@ -32,12 +32,12 @@ export function Stats() {
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div
           className={cn(
-            'grid gap-12 lg:gap-8 items-start',
-            'grid-cols-1 lg:grid-cols-[1fr_1.5fr]'
+            'grid gap-12 lg:gap-8 items-center',
+            'grid-cols-1 lg:grid-cols-[1fr_1fr]'
           )}
         >
           {/* Left Column - Text */}
-          <div className="lg:pt-8">
+          <div>
             <p className="text-sm text-text-muted mb-4">Our Presence</p>
             <h2 className="font-serif text-text-primary mb-6">
               A quick look at the scale
@@ -56,10 +56,22 @@ export function Stats() {
             </a>
           </div>
 
-          {/* Right Column - Stats in a row with connecting line */}
+          {/* Right Column - 2x2 Stats grid with connecting line */}
           <div className="relative">
-            {/* Mobile: 2x2 grid */}
-            <div className="lg:hidden grid grid-cols-2 gap-4 justify-items-center">
+            {/* Horizontal connecting line - passes through outer cards */}
+            <div
+              className="hidden lg:block absolute bg-border-subtle"
+              style={{
+                left: '-60px',
+                right: '-200px',
+                top: '50%',
+                height: '1px',
+                transform: 'translateY(-50%)',
+              }}
+            />
+
+            {/* 2x2 Grid */}
+            <div className="relative grid grid-cols-2 gap-6 lg:gap-8 justify-items-center max-w-[450px] mx-auto lg:mx-0">
               {STATS.map((stat) => (
                 <StatCard
                   key={stat.id}
@@ -68,32 +80,6 @@ export function Stats() {
                   suffix={stat.suffix}
                 />
               ))}
-            </div>
-
-            {/* Desktop: Inline layout with line through outer cards */}
-            <div className="hidden lg:block relative">
-              {/* Horizontal connecting line - passes through the cards */}
-              <div
-                className="absolute bg-border-subtle"
-                style={{
-                  left: '-100px',
-                  right: '-100px',
-                  top: '100px',
-                  height: '1px',
-                }}
-              />
-
-              {/* Stats cards in a row */}
-              <div className="relative flex items-center justify-between gap-4">
-                {STATS.map((stat) => (
-                  <StatCard
-                    key={stat.id}
-                    value={stat.value}
-                    label={stat.label}
-                    suffix={stat.suffix}
-                  />
-                ))}
-              </div>
             </div>
           </div>
         </div>
