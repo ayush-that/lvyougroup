@@ -5,7 +5,6 @@ export function Hero() {
   return (
     <section id="hero" className="bg-bg-main pt-8 lg:pt-12">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        {/* Text Content with Decorative Line */}
         <div className="relative mb-8 lg:mb-0">
           <div className="lg:max-w-[45%]">
             <h1 className="font-serif text-text-primary mb-6 max-w-[560px]">
@@ -18,7 +17,6 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Decorative L-shaped Line - Desktop only */}
           <div
             className={cn(
               'hidden lg:block absolute',
@@ -38,7 +36,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Full-width Hero Image */}
       <div className="relative mt-8 lg:mt-0">
         <div className="aspect-[21/9] w-full overflow-hidden">
           <img
@@ -46,7 +43,6 @@ export function Hero() {
             alt="Modern architecture representing strategic growth"
             className="w-full h-full object-cover"
           />
-          {/* Bottom Gradient Overlay */}
           <div
             className={cn(
               'absolute bottom-0 left-0 right-0',

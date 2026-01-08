@@ -13,14 +13,12 @@ export function Footer() {
   return (
     <footer id="footer" className="bg-teal-dark py-16">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        {/* Footer Grid */}
         <div
           className={cn(
             'grid gap-10',
             'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'
           )}
         >
-          {/* Logo & Description Column */}
           <div className="sm:col-span-2 lg:col-span-1">
             <a href="#hero" className="inline-block mb-6">
               <span
@@ -35,7 +33,6 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Services Column */}
           <div>
             <h4
               className="text-base font-semibold mb-5"
@@ -58,7 +55,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Resources Column */}
           <div>
             <h4
               className="text-base font-semibold mb-5"
@@ -81,7 +77,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact Column */}
           <div>
             <h4
               className="text-base font-semibold mb-5"
@@ -121,7 +116,6 @@ export function Footer() {
 
         <Separator className="my-10 bg-white/20" />
 
-        {/* Bottom Bar */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>
             &copy; {currentYear} LVyou Pte Ltd. All rights reserved.

@@ -36,7 +36,6 @@ export function Stats() {
             'grid-cols-1 lg:grid-cols-[1fr_1fr]'
           )}
         >
-          {/* Left Column - Text */}
           <div>
             <p className="text-sm text-text-muted mb-4">Our Presence</p>
             <h2 className="font-serif text-text-primary mb-6">
@@ -56,9 +55,7 @@ export function Stats() {
             </a>
           </div>
 
-          {/* Right Column - 2x2 Stats grid */}
           <div className="relative">
-            {/* 2x2 Grid */}
             <div className="grid grid-cols-2 gap-6 lg:gap-8 justify-items-center max-w-[450px] mx-auto lg:mx-0">
               {STATS.map((stat) => (
                 <StatCard

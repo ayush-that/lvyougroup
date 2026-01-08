@@ -1,6 +1,5 @@
 import type { NavItem, ValueCard, ClientSegment, Stat, Service, FooterColumn, ContactInfo } from '@/types';
 
-// Navigation items - using anchor links for smooth scroll
 export const NAV_ITEMS: NavItem[] = [
   { label: 'About Us', href: '#values' },
   { label: 'What We Do', href: '#services' },
@@ -15,7 +14,6 @@ export const IMAGES = {
   investors: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80',
   partners: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80',
   ctaBackground: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80',
-  // Service images
   paymentSystems: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=80',
   blockchain: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1200&q=80',
   goldSilver: 'https://images.unsplash.com/photo-1610375461246-83df859d849d?w=1200&q=80',
@@ -114,7 +112,6 @@ export const SERVICES: Service[] = [
   },
 ];
 
-// Footer services - all link to services section
 export const FOOTER_SERVICES: FooterColumn = {
   title: 'Services',
   links: [
@@ -127,7 +124,6 @@ export const FOOTER_SERVICES: FooterColumn = {
   ],
 };
 
-// Footer resources - link to relevant sections
 export const FOOTER_RESOURCES: FooterColumn = {
   title: 'Company',
   links: [

@@ -14,7 +14,6 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
 
-  /* Map shadcn semantic colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -34,7 +33,6 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  /* Custom brand colors for Tailwind utilities */
   --color-bg-main: var(--bg-main);
   --color-bg-cream: var(--bg-cream);
   --color-bg-muted: var(--bg-muted);
@@ -44,7 +42,6 @@
   --color-text-muted: var(--text-muted);
   --color-border-subtle: var(--border-subtle);
 
-  /* Font families */
   --font-family-serif: var(--font-serif);
   --font-family-sans: var(--font-sans);
 }
@@ -52,7 +49,6 @@
 :root {
   --radius: 0.625rem;
 
-  /* Override shadcn defaults with brand colors */
   --background: #faf7f3;
   --foreground: #0b2b2e;
   --card: #ffffff;
@@ -108,7 +104,6 @@
 }
 
 @layer utilities {
-  /* Container utility */
   .container {
     width: 100%;
     max-width: 1280px;
@@ -116,7 +111,6 @@
     margin-right: auto;
   }
 
-  /* Font utilities */
   .font-serif {
     font-family: var(--font-serif);
   }

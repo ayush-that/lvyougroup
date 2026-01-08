@@ -1,10 +1,8 @@
-// Navigation types
 export interface NavItem {
   label: string;
   href: string;
 }
 
-// Value card types
 export type ValueVariant = 'muted' | 'dark' | 'cream';
 
 export interface ValueCard {
@@ -14,14 +12,12 @@ export interface ValueCard {
   variant: ValueVariant;
 }
 
-// Client segment types
 export interface ClientSegment {
   id: string;
   title: string;
   image: string;
 }
 
-// Stat types
 export interface Stat {
   id: string;
   value: string;
@@ -29,7 +25,6 @@ export interface Stat {
   suffix?: string;
 }
 
-// Service types
 export interface Service {
   id: string;
   title: string;
@@ -37,7 +32,6 @@ export interface Service {
   image: string;
 }
 
-// Footer types
 export interface FooterLink {
   label: string;
   href: string;
@@ -48,14 +42,12 @@ export interface FooterColumn {
   links: FooterLink[];
 }
 
-// Contact info types
 export interface ContactInfo {
   email: string;
   phone: string;
   address: string[];
 }
 
-// UI State
 export interface UIState {
   mobileNavOpen: boolean;
   activeService: string;

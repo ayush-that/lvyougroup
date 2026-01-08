@@ -5,7 +5,6 @@ import { cn } from '@/lib/utils';
 export function WhoWeServe() {
   return (
     <section id="who-we-serve" className="relative overflow-hidden">
-      {/* Background - Light teal at top */}
       <div className="absolute top-0 left-0 right-0 h-[60%] bg-bg-muted" />
 
       <div className="relative py-20 lg:py-28">
@@ -18,7 +17,6 @@ export function WhoWeServe() {
             className="max-w-3xl"
           />
 
-          {/* Client Cards Grid */}
           <div
             className={cn(
               'grid gap-6',
@@ -28,7 +26,6 @@ export function WhoWeServe() {
           >
             {CLIENT_SEGMENTS.map((segment) => (
               <div key={segment.id} className="group">
-                {/* Image Container - 4:3 aspect ratio */}
                 <div className="aspect-[4/3] overflow-hidden rounded-lg mb-4">
                   <img
                     src={segment.image}
@@ -41,7 +38,6 @@ export function WhoWeServe() {
                   />
                 </div>
 
-                {/* Title */}
                 <h3 className="font-serif text-xl text-text-primary">
                   {segment.title}
                 </h3>

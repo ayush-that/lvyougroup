@@ -7,19 +7,17 @@ import { SERVICES } from '@/lib/constants';
 import { useUIStore } from '@/store/ui.store';
 import { cn } from '@/lib/utils';
 
-const AUTO_CHANGE_INTERVAL = 5000; // 5 seconds
+const AUTO_CHANGE_INTERVAL = 5000;
 
 export function Services() {
   const { activeService, setActiveService } = useUIStore();
   const selectedService = SERVICES.find((s) => s.id === activeService) || SERVICES[0];
   const activeIndex = SERVICES.findIndex((s) => s.id === activeService);
 
-  // Refs for measuring button positions
   const navRef = useRef<HTMLElement>(null);
   const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const [indicatorStyle, setIndicatorStyle] = useState({ top: 0, height: 0 });
 
-  // Update indicator position when active service changes
   useEffect(() => {
     const activeButton = buttonRefs.current[activeIndex];
     if (activeButton && navRef.current) {
@@ -32,7 +30,6 @@ export function Services() {
     }
   }, [activeIndex]);
 
-  // Auto-change service every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       const currentIndex = SERVICES.findIndex((s) => s.id === activeService);
@@ -46,7 +43,6 @@ export function Services() {
   return (
     <section id="services" className="bg-bg-main py-20 lg:py-28">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        {/* Header */}
         <SectionHeading
           eyebrow="What We Do"
           title="Strategic consulting across three high-impact sectors."
@@ -55,16 +51,13 @@ export function Services() {
           className="max-w-3xl"
         />
 
-        {/* Content Layout */}
         <div className="mt-16">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-            {/* Left Column - Service Navigation with animated indicator */}
             <div className="lg:w-[280px] flex-shrink-0">
               <nav
                 ref={navRef}
                 className="relative flex flex-row lg:flex-col gap-0 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0"
               >
-                {/* Animated blue indicator bar */}
                 <motion.div
                   className="hidden lg:block absolute left-0 w-[3px] bg-teal-dark rounded-full"
                   initial={false}
@@ -79,7 +72,6 @@ export function Services() {
                   }}
                 />
 
-                {/* Static track line */}
                 <div className="hidden lg:block absolute left-0 top-0 w-[3px] h-full bg-border-subtle/50 rounded-full" />
 
                 {SERVICES.map((service, index) => (
@@ -95,7 +87,6 @@ export function Services() {
                         : 'text-text-muted hover:text-text-primary'
                     )}
                   >
-                    {/* Mobile indicator */}
                     <span
                       className={cn(
                         'lg:hidden absolute bottom-0 left-4 right-4 h-[2px] rounded-full transition-colors',
@@ -108,7 +99,6 @@ export function Services() {
               </nav>
             </div>
 
-            {/* Right Column - Animated Service Image */}
             <div className="flex-1 relative">
               <div className="aspect-[16/10] overflow-hidden rounded-lg bg-bg-muted">
                 <AnimatePresence mode="wait">
@@ -130,7 +120,6 @@ export function Services() {
             </div>
           </div>
 
-          {/* Service Description - Animated */}
           <div className="mt-12 lg:mt-16 flex flex-col lg:flex-row gap-8 lg:gap-16 items-start">
             <div className="flex gap-4 flex-1">
               <div className="w-[3px] bg-teal-dark flex-shrink-0 self-stretch rounded-full" />
@@ -152,7 +141,6 @@ export function Services() {
             </div>
           </div>
 
-          {/* CTA Button - Animated */}
           <div className="mt-10 flex justify-center">
             <a href="#cta">
               <AnimatePresence mode="wait">

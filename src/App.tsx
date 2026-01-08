@@ -19,7 +19,6 @@ export function App() {
 
         <Footer />
 
-        {/* Blur gradient overlay at bottom */}
         <BlurOverlay position="bottom" />
       </div>
     </SmoothScroll>

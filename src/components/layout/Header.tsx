@@ -24,14 +24,12 @@ export function Header() {
     >
       <div className="container mx-auto h-full px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between h-full">
-          {/* Logo */}
           <a href="#hero" className="flex items-center">
             <span className="font-serif text-2xl font-medium text-teal-dark tracking-tight">
               LVyou
             </span>
           </a>
 
-          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-7">
             {NAV_ITEMS.map((item) => (
               <NavLink key={item.href} href={item.href}>
@@ -40,10 +38,8 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Empty div to maintain spacing on desktop */}
           <div className="hidden lg:block w-[1px]" />
 
-          {/* Mobile Menu */}
           <Sheet open={mobileNavOpen} onOpenChange={toggleMobileNav}>
             <SheetTrigger asChild className="lg:hidden">
               <Button variant="ghost" size="icon" className="text-teal-dark">
