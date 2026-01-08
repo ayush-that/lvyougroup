@@ -1,0 +1,54 @@
+/* Brand Color Tokens */
+:root {
+  /* Background colors */
+  --bg-main: #faf7f3;
+  --bg-cream: #ece7df;
+  --bg-muted: #d7e6e7;
+
+  /* Brand colors */
+  --teal-dark: #0f3940;
+  --teal-accent: #123b43;
+
+  /* Text colors */
+  --text-primary: #0b2b2e;
+  --text-muted: #5b6f73;
+
+  /* Border colors */
+  --border-subtle: rgba(15, 57, 64, 0.15);
+
+  /* Typography */
+  --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Typography Base Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+}
+
+h1 {
+  font-size: clamp(32px, 5.5vw, 56px);
+  line-height: 1.05;
+}
+
+h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.1;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.text-small {
+  font-size: 14px;
+  line-height: 1.5;
+}
