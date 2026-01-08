@@ -1,15 +1,11 @@
-import { Menu } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import {
-  Sheet,
-  SheetContent,
-  SheetTitle,
-  SheetTrigger,
-} from '@/components/ui/sheet';
-import { NavLink } from '@/components/common';
-import { NAV_ITEMS } from '@/lib/constants';
-import { useUIStore } from '@/store/ui.store';
-import { cn } from '@/lib/utils';
+import { Menu } from "lucide-react";
+import logo from "@/assets/logo.png";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { NavLink } from "@/components/common";
+import { NAV_ITEMS } from "@/lib/constants";
+import { useUIStore } from "@/store/ui.store";
+import { cn } from "@/lib/utils";
 
 export function Header() {
   const { mobileNavOpen, toggleMobileNav, closeMobileNav } = useUIStore();
@@ -17,17 +13,15 @@ export function Header() {
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 h-[72px]',
-        'bg-bg-main/95 backdrop-blur-sm',
-        'border-b border-border-subtle'
+        "sticky top-0 z-50 h-[72px]",
+        "bg-bg-main/95 backdrop-blur-sm",
+        "border-b border-border-subtle",
       )}
     >
       <div className="container mx-auto h-full px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between h-full">
           <a href="#hero" className="flex items-center">
-            <span className="font-serif text-2xl font-medium text-teal-dark tracking-tight">
-              LVyou
-            </span>
+            <img src={logo} alt="LvyouGroup" className="h-8" />
           </a>
 
           <nav className="hidden lg:flex items-center gap-7">
@@ -47,10 +41,7 @@ export function Header() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent
-              side="right"
-              className="w-[280px] bg-bg-main border-l-border-subtle"
-            >
+            <SheetContent side="right" className="w-[280px] bg-bg-main border-l-border-subtle">
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <nav className="flex flex-col gap-4 mt-4 px-4">
                 {NAV_ITEMS.map((item) => (

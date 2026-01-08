@@ -1,5 +1,5 @@
-import { IMAGES } from '@/lib/constants';
-import { cn } from '@/lib/utils';
+import { IMAGES } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 
 export function Hero() {
   return (
@@ -13,7 +13,8 @@ export function Hero() {
               <span className="italic">Backed by Capital</span>
             </h1>
             <p className="text-text-muted text-lg max-w-md">
-              Management consulting in payment systems, blockchain, and commodities—with the resources to execute, not just advise.
+              Management consulting in payment systems, blockchain, and commodities—with the
+              resources to execute, not just advise.
             </p>
           </div>
         </div>
@@ -28,9 +29,9 @@ export function Hero() {
           />
           <div
             className={cn(
-              'absolute bottom-0 left-0 right-0',
-              'h-[30%]',
-              'bg-gradient-to-t from-black/40 to-transparent'
+              "absolute bottom-0 left-0 right-0",
+              "h-[30%]",
+              "bg-gradient-to-t from-black/40 to-transparent",
             )}
           />
         </div>

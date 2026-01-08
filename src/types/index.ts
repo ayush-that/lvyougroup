@@ -3,7 +3,7 @@ export interface NavItem {
   href: string;
 }
 
-export type ValueVariant = 'muted' | 'dark' | 'cream';
+export type ValueVariant = "muted" | "dark" | "cream";
 
 export interface ValueCard {
   id: string;

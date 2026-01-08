@@ -93,7 +93,6 @@ src/
 
 ### Type Scale
 
-
 | Element | Size                       | Line-height | Weight |
 | ------- | -------------------------- | ----------- | ------ |
 | H1      | `clamp(32px, 5.5vw, 56px)` | 1.05        | 500    |
@@ -101,7 +100,6 @@ src/
 | H3      | 22px                       | 1.2         | 500    |
 | Body    | 16px                       | 1.6         | 400    |
 | Small   | 14px                       | 1.5         | 400    |
-
 
 ---
 
@@ -130,9 +128,9 @@ Mapped into Tailwind config.
 
 ```ts
 interface UIState {
-  mobileNavOpen: boolean
-  toggleMobileNav(): void
-  closeMobileNav(): void
+  mobileNavOpen: boolean;
+  toggleMobileNav(): void;
+  closeMobileNav(): void;
 }
 ```
 

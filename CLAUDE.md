@@ -19,6 +19,7 @@ bun run preview   # Preview production build
 ## Architecture
 
 ### Tech Stack
+
 - **Runtime/Package Manager:** Bun
 - **Build:** Vite with `@tailwindcss/vite` plugin
 - **UI:** React 19, Tailwind CSS v4, shadcn/ui (new-york style)
@@ -47,6 +48,7 @@ src/
 **Component Organization:** Barrel exports via `index.ts` in each component folder. Import from folder path, not individual files.
 
 **Styling:**
+
 - Theme tokens defined in `src/styles/theme.css` (--bg-main, --teal-dark, --text-primary, etc.)
 - Tailwind classes reference these via `bg-bg-main`, `text-text-primary`, etc.
 - Typography uses `--font-serif` (Instrument Serif) for headings, `--font-sans` (Inter Tight) for body
@@ -54,6 +56,7 @@ src/
 **State Management:** UI state (mobile nav, active service) managed via Zustand store. Access with `useUIStore` hook and selectors.
 
 **Layout:**
+
 - Max content width: 1280px (`.container` utility)
 - Responsive padding: `px-4` (mobile) → `px-6` (tablet) → `px-8` (desktop)
 - Section spacing: `py-16` standard, `py-24` major sections
@@ -63,4 +66,5 @@ src/
 ```bash
 bunx --bun shadcn@latest add <component>
 ```
+
 Components install to `src/components/ui/`. Config in `components.json`.

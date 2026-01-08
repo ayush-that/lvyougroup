@@ -1,7 +1,7 @@
-import { ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { STATS } from '@/lib/constants';
-import { cn } from '@/lib/utils';
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { STATS } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 
 interface StatCardProps {
   value: string;
@@ -13,8 +13,8 @@ function StatCard({ value, label, suffix }: StatCardProps) {
   return (
     <div
       className={cn(
-        'flex flex-col items-center justify-center text-center',
-        'w-[180px] h-[180px] lg:w-[200px] lg:h-[200px] bg-teal-dark rounded-sm'
+        "flex flex-col items-center justify-center text-center",
+        "w-[180px] h-[180px] lg:w-[200px] lg:h-[200px] bg-teal-dark rounded-sm",
       )}
     >
       <div className="font-serif text-[40px] lg:text-[48px] leading-tight font-medium text-white">
@@ -31,10 +31,7 @@ export function Stats() {
     <section id="stats" className="bg-bg-cream py-20 lg:py-28 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div
-          className={cn(
-            'grid gap-12 lg:gap-8 items-center',
-            'grid-cols-1 lg:grid-cols-[1fr_1fr]'
-          )}
+          className={cn("grid gap-12 lg:gap-8 items-center", "grid-cols-1 lg:grid-cols-[1fr_1fr]")}
         >
           <div>
             <p className="text-sm text-text-muted mb-4">Our Presence</p>
@@ -44,8 +41,8 @@ export function Stats() {
               and stability of our firm.
             </h2>
             <p className="text-text-muted mb-8 max-w-md">
-              We serve clients nationwide with a strong team, a disciplined
-              approach, and a long-standing commitment to financial clarity.
+              We serve clients nationwide with a strong team, a disciplined approach, and a
+              long-standing commitment to financial clarity.
             </p>
             <a href="#services">
               <Button className="bg-teal-dark hover:bg-teal-accent text-white gap-2">

@@ -1,20 +1,20 @@
-import { SectionHeading } from '@/components/common';
-import { VALUES } from '@/lib/constants';
-import { cn } from '@/lib/utils';
-import type { ValueVariant } from '@/types';
+import { SectionHeading } from "@/components/common";
+import { VALUES } from "@/lib/constants";
+import { cn } from "@/lib/utils";
+import type { ValueVariant } from "@/types";
 
 const variantStyles: Record<ValueVariant, { bg: string; text: string }> = {
   muted: {
-    bg: 'bg-bg-muted',
-    text: 'text-text-primary',
+    bg: "bg-bg-muted",
+    text: "text-text-primary",
   },
   dark: {
-    bg: 'bg-teal-dark',
-    text: 'text-white',
+    bg: "bg-teal-dark",
+    text: "text-white",
   },
   cream: {
-    bg: 'bg-bg-cream',
-    text: 'text-text-primary',
+    bg: "bg-bg-cream",
+    text: "text-text-primary",
   },
 };
 
@@ -28,36 +28,31 @@ export function Values() {
           subtitle="We're building toward a family office because we believe in long-term partnerships over short-term transactions."
         />
 
-        <div
-          className={cn(
-            'grid gap-6',
-            'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
-          )}
-        >
+        <div className={cn("grid gap-6", "grid-cols-1 md:grid-cols-2 lg:grid-cols-3")}>
           {VALUES.map((value) => {
             const styles = variantStyles[value.variant];
             return (
               <div
                 key={value.id}
                 className={cn(
-                  'p-6 lg:p-8 rounded-2xl',
-                  'min-h-[220px] flex flex-col lg:justify-between',
+                  "p-6 lg:p-8 rounded-2xl",
+                  "min-h-[220px] flex flex-col lg:justify-between",
                   styles.bg,
-                  styles.text
+                  styles.text,
                 )}
               >
                 <h3
                   className={cn(
-                    'font-serif text-center text-3xl lg:text-4xl italic mb-4 lg:mb-6',
-                    styles.text
+                    "font-serif text-center text-3xl lg:text-4xl italic mb-4 lg:mb-6",
+                    styles.text,
                   )}
                 >
                   {value.title}
                 </h3>
                 <p
                   className={cn(
-                    'text-sm leading-relaxed',
-                    value.variant === 'dark' ? 'text-white/80' : 'text-text-muted'
+                    "text-sm leading-relaxed",
+                    value.variant === "dark" ? "text-white/80" : "text-text-muted",
                   )}
                 >
                   {value.description}

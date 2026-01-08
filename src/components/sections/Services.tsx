@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from 'react';
-import { ArrowRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { SectionHeading } from '@/components/common';
-import { SERVICES } from '@/lib/constants';
-import { useUIStore } from '@/store/ui.store';
-import { cn } from '@/lib/utils';
+import { useEffect, useRef, useState } from "react";
+import { ArrowRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { SectionHeading } from "@/components/common";
+import { SERVICES } from "@/lib/constants";
+import { useUIStore } from "@/store/ui.store";
+import { cn } from "@/lib/utils";
 
 const AUTO_CHANGE_INTERVAL = 5000;
 
@@ -66,7 +66,7 @@ export function Services() {
                     height: indicatorStyle.height,
                   }}
                   transition={{
-                    type: 'spring',
+                    type: "spring",
                     stiffness: 300,
                     damping: 30,
                   }}
@@ -77,20 +77,22 @@ export function Services() {
                 {SERVICES.map((service, index) => (
                   <button
                     key={service.id}
-                    ref={(el) => { buttonRefs.current[index] = el; }}
+                    ref={(el) => {
+                      buttonRefs.current[index] = el;
+                    }}
                     onClick={() => setActiveService(service.id)}
                     className={cn(
-                      'relative text-left pl-5 pr-4 py-3 whitespace-nowrap lg:whitespace-normal',
-                      'text-sm transition-all duration-200',
+                      "relative text-left pl-5 pr-4 py-3 whitespace-nowrap lg:whitespace-normal",
+                      "text-sm transition-all duration-200",
                       activeService === service.id
-                        ? 'text-text-primary font-medium'
-                        : 'text-text-muted hover:text-text-primary'
+                        ? "text-text-primary font-medium"
+                        : "text-text-muted hover:text-text-primary",
                     )}
                   >
                     <span
                       className={cn(
-                        'lg:hidden absolute bottom-0 left-4 right-4 h-[2px] rounded-full transition-colors',
-                        activeService === service.id ? 'bg-teal-dark' : 'bg-transparent'
+                        "lg:hidden absolute bottom-0 left-4 right-4 h-[2px] rounded-full transition-colors",
+                        activeService === service.id ? "bg-teal-dark" : "bg-transparent",
                       )}
                     />
                     {service.title}
@@ -132,7 +134,7 @@ export function Services() {
                   exit={{ opacity: 0, y: -10 }}
                   transition={{
                     duration: 0.3,
-                    ease: 'easeOut',
+                    ease: "easeOut",
                   }}
                 >
                   {selectedService.description}

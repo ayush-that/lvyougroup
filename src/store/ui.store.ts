@@ -1,13 +1,14 @@
-import { create } from 'zustand';
-import type { UIState } from '@/types';
+import { create } from "zustand";
+import type { UIState } from "@/types";
 
 export const useUIStore = create<UIState>((set) => ({
   mobileNavOpen: false,
-  activeService: 'payment-systems',
+  activeService: "payment-systems",
 
-  toggleMobileNav: () => set((state) => ({
-    mobileNavOpen: !state.mobileNavOpen
-  })),
+  toggleMobileNav: () =>
+    set((state) => ({
+      mobileNavOpen: !state.mobileNavOpen,
+    })),
 
   closeMobileNav: () => set({ mobileNavOpen: false }),
 

@@ -1,42 +1,36 @@
 # Project Context: lvyougroup
 
 ## Overview
-`lvyougroup` is a modern web application built with **React 19**, **TypeScript**, and **Vite**. It utilizes **Tailwind CSS 4** for styling and is configured to use **shadcn/ui** for UI components. The project uses **Bun** strictly as the package manager and runtime.
+
+`lvyougroup` is a modern frontend web application built with React 19, TypeScript, and Vite. It utilizes Tailwind CSS v4 for styling and shadcn/ui for accessible, composable UI components. The project also incorporates advanced animation and interaction libraries like Framer Motion and Lenis.
 
 ## Tech Stack
-- **Framework:** React 19
-- **Build Tool:** Vite 7
-- **Language:** TypeScript (~5.9)
-- **Styling:** Tailwind CSS 4
-- **UI Library:** shadcn/ui (Style: New York, Base Color: Neutral)
-- **Icons:** Lucide React
-- **Package Manager:** Bun (Strict)
 
-## Project Structure
-- `src/`: Source code directory.
-  - `App.tsx`: Main application component.
-  - `lib/utils.ts`: Utility functions (cn helper for shadcn).
-  - `index.css`: Global styles (Tailwind directives).
-- `components.json`: Configuration for shadcn/ui components.
-- `vite.config.ts`: Vite configuration.
-- `bun.lock`: Bun lockfile (ensures deterministic installs).
+- **Runtime/Package Manager:** [Bun](https://bun.sh/) (Strictly enforced)
+- **Framework:** React 19 + TypeScript
+- **Build Tool:** Vite 7
+- **Styling:**
+  - Tailwind CSS v4 (using `@tailwindcss/vite`)
+  - [shadcn/ui](https://ui.shadcn.com/) (New York style, CSS variables, OKLCH colors)
+  - `tw-animate-css` for Tailwind animations
+- **State Management:** Zustand
+- **Animation:** Framer Motion
+- **Smooth Scroll:** Lenis
+- **Icons:** Lucide React
 
 ## Development Workflow
 
-### Prerequisites
-- **Bun** must be installed.
-
-### Commands
-All commands should be run using `bun`.
+### Scripts
 
 - **Start Development Server:**
   ```bash
-  bun run dev
+  bun dev
   ```
 - **Build for Production:**
   ```bash
   bun run build
   ```
+  (Runs `tsc -b` for type checking followed by `vite build`)
 - **Lint Code:**
   ```bash
   bun run lint
@@ -46,17 +40,29 @@ All commands should be run using `bun`.
   bun run preview
   ```
 
-### Key Conventions
-1.  **Package Management:** Always use `bun add`, `bun install`, etc. Do not use `npm` or `yarn`.
-2.  **Component Import Aliases:**
-    - Components: `@/components`
-    - UI Components: `@/components/ui`
-    - Lib/Utils: `@/lib`
-    - Hooks: `@/hooks`
-3.  **Styling:** Use Tailwind CSS utility classes. For conditional class merging, use the `cn` utility from `@/lib/utils` (wraps `clsx` and `tailwind-merge`).
-4.  **UI Components:** Add new shadcn/ui components via the CLI (e.g., `bunx --bun shadcn@latest add button`).
+### File Structure & Conventions
 
-## Configuration Details
-- **Tailwind:** Configured via `@tailwindcss/vite` plugin (Tailwind v4).
-- **TypeScript:** Strict mode enabled.
-- **ESLint:** Configured for React and TypeScript with React Hooks and Refresh plugins.
+- **Path Aliases:** `@/*` maps to `./src/*`
+- **Components:**
+  - UI Primitives (shadcn/ui): `src/components/ui`
+  - Layout Components: `src/components/layout`
+  - Section Components: `src/components/sections`
+  - Common/Shared Components: `src/components/common`
+- **Styling:**
+  - Global styles and CSS variables are defined in `src/index.css`.
+  - Uses `clsx` and `tailwind-merge` via the `cn()` utility in `src/lib/utils.ts`.
+- **State:** Global stores are located in `src/store` (using Zustand).
+- **Assets:** Static assets in `public/` and `src/assets`.
+
+## Key Configuration Files
+
+- `package.json`: Dependencies and scripts.
+- `vite.config.ts`: Vite configuration, including plugins and alias resolution.
+- `tsconfig.json` & `tsconfig.app.json`: TypeScript configuration.
+- `components.json`: shadcn/ui configuration settings.
+- `CLAUDE.md`: Additional project context and guidelines.
+
+## Notes
+
+- **Package Manager:** This project uses **Bun**. Do not use `npm` or `yarn`.
+- **Tailwind v4:** Note that Tailwind v4 is used, which often implies configuration via CSS variables and the CSS-in-JS approach in `index.css` rather than a large `tailwind.config.js`.

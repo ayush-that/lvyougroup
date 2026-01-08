@@ -1,6 +1,6 @@
-import { Header, Footer } from '@/components/layout';
-import { Hero, Values, WhoWeServe, Stats, Services, CTA } from '@/components/sections';
-import { SmoothScroll, BlurOverlay } from '@/components/common';
+import { Header, Footer } from "@/components/layout";
+import { Hero, Values, WhoWeServe, Stats, Services, CTA } from "@/components/sections";
+import { SmoothScroll, BlurOverlay } from "@/components/common";
 
 export function App() {
   return (
