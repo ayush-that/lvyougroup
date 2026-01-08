@@ -3,7 +3,7 @@ import type { UIState } from '@/types';
 
 export const useUIStore = create<UIState>((set) => ({
   mobileNavOpen: false,
-  activeService: 'financial-planning',
+  activeService: 'payment-systems',
 
   toggleMobileNav: () => set((state) => ({
     mobileNavOpen: !state.mobileNavOpen
