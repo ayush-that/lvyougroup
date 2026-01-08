@@ -3,7 +3,6 @@ import { Button } from '@/components/ui/button';
 import {
   Sheet,
   SheetContent,
-  SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
@@ -56,12 +55,8 @@ export function Header() {
               side="right"
               className="w-[280px] bg-bg-main border-l-border-subtle"
             >
-              <SheetHeader className="text-left">
-                <SheetTitle className="font-serif text-xl text-teal-dark">
-                  Menu
-                </SheetTitle>
-              </SheetHeader>
-              <nav className="flex flex-col gap-4 mt-6 px-4">
+              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+              <nav className="flex flex-col gap-4 mt-4 px-4">
                 {NAV_ITEMS.map((item) => (
                   <NavLink
                     key={item.href}
