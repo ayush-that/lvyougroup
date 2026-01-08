@@ -9,7 +9,7 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const IMAGES = {
   hero: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80',
-  enterprises: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80',
+  enterprises: 'https://images.unsplash.com/photo-1497215842964-222b430dc094?w=800&q=80',
   innovators: 'https://images.unsplash.com/photo-1553484771-371a605b060b?w=800&q=80',
   investors: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80',
   partners: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80',
@@ -32,13 +32,13 @@ export const VALUES: ValueCard[] = [
   {
     id: 'execution-excellence',
     title: 'Execution Excellence',
-    description: 'Strategy without execution is merely theory. We bring the resources, networks, and capital to transform recommendations into results—backed by our $69M credit facility.',
+    description: 'Strategy without execution is merely theory. We bring the resources, networks, and capital to transform recommendations into results—backed by our $69M credit facility and decades of operational experience across payments, blockchain, and commodities.',
     variant: 'dark',
   },
   {
     id: 'partnership-mindset',
     title: 'Partnership Mindset',
-    description: 'We invest alongside our clients—not just with advice, but with capital. Our transition to a family office structure reflects our commitment to long-term value creation over transactional relationships.',
+    description: 'We invest alongside our clients—not just with advice, but with capital. Our transition to a family office structure reflects our commitment to long-term value creation over transactional relationships. Your success is our success.',
     variant: 'cream',
   },
 ];

@@ -44,6 +44,7 @@
 
   --font-family-serif: var(--font-serif);
   --font-family-sans: var(--font-sans);
+  --font-family-mono: var(--font-mono);
 }
 
 :root {
@@ -117,5 +118,9 @@
 
   .font-sans {
     font-family: var(--font-sans);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
   }
 }

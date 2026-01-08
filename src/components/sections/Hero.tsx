@@ -7,7 +7,7 @@ export function Hero() {
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="relative mb-8 lg:mb-0">
           <div className="lg:max-w-[45%]">
-            <h1 className="font-serif text-text-primary mb-6 max-w-[560px]">
+            <h1 className="font-serif text-text-primary mb-6 lg:mb-12 max-w-[560px]">
               <span className="italic">Strategic Consulting</span>
               <br />
               <span className="italic">Backed by Capital</span>
@@ -16,23 +16,6 @@ export function Hero() {
               Management consulting in payment systems, blockchain, and commodities—with the resources to execute, not just advise.
             </p>
           </div>
-
-          <div
-            className={cn(
-              'hidden lg:block absolute',
-              'top-[40px] left-[calc(45%+20px)]',
-              'w-[calc(55%-20px)] h-[1px]',
-              'bg-border-subtle'
-            )}
-          />
-          <div
-            className={cn(
-              'hidden lg:block absolute',
-              'top-[40px] right-0',
-              'w-[1px] h-[calc(100%+100px)]',
-              'bg-border-subtle'
-            )}
-          />
         </div>
       </div>
 

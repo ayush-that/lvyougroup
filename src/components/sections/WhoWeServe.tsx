@@ -5,7 +5,6 @@ import { cn } from '@/lib/utils';
 export function WhoWeServe() {
   return (
     <section id="who-we-serve" className="relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-[60%] bg-bg-muted" />
 
       <div className="relative py-20 lg:py-28">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
@@ -30,11 +29,7 @@ export function WhoWeServe() {
                   <img
                     src={segment.image}
                     alt={segment.title}
-                    className={cn(
-                      'w-full h-full object-cover',
-                      'transition-transform duration-200 ease-out',
-                      'group-hover:scale-[1.03]'
-                    )}
+                    className="w-full h-full object-cover"
                   />
                 </div>
 

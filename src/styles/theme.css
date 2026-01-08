@@ -11,8 +11,9 @@
 
   --border-subtle: rgba(15, 57, 64, 0.15);
 
-  --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-sans: "Lato", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Inter Tight", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
 h1, h2, h3, h4, h5, h6 {
