@@ -59,24 +59,24 @@ export function Stats() {
           {/* Right Column - 2x2 Stats grid with inverted L line */}
           {/* Card: 200x200, Gap: 32px. Centers: top-left(100,100), bottom-left(100,332), bottom-right(332,332) */}
           <div className="relative">
-            {/* Inverted L - Vertical line through center of left column cards */}
+            {/* Inverted L - Vertical line through center of left column cards, extended to edges */}
             <div
               className="hidden lg:block absolute bg-border-subtle"
               style={{
                 left: '100px',
-                top: '100px',
+                top: '-80px',
                 width: '1px',
-                height: '232px', /* from center of top-left to center of bottom-left */
+                height: 'calc(100% + 160px)', /* extends beyond top and bottom */
               }}
             />
 
-            {/* Inverted L - Horizontal line through center of bottom row cards */}
+            {/* Inverted L - Horizontal line through center of bottom row cards, extended to edge */}
             <div
               className="hidden lg:block absolute bg-border-subtle"
               style={{
                 left: '100px',
                 top: '332px',
-                width: '232px', /* from center of bottom-left to center of bottom-right */
+                width: 'calc(100% + 200px)', /* extends beyond right edge */
                 height: '1px',
               }}
             />
