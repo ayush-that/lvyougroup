@@ -56,17 +56,27 @@ export function Stats() {
             </a>
           </div>
 
-          {/* Right Column - 2x2 Stats grid with connecting line */}
+          {/* Right Column - 2x2 Stats grid with inverted L line */}
           <div className="relative">
-            {/* Horizontal connecting line - passes through outer cards */}
+            {/* Inverted L - Vertical line through left column */}
             <div
               className="hidden lg:block absolute bg-border-subtle"
               style={{
-                left: '-60px',
+                left: '-40px',
+                top: '0',
+                width: '1px',
+                height: 'calc(100% + 80px)',
+              }}
+            />
+
+            {/* Inverted L - Horizontal line from bottom of vertical to right */}
+            <div
+              className="hidden lg:block absolute bg-border-subtle"
+              style={{
+                left: '-40px',
                 right: '-200px',
-                top: '50%',
+                bottom: '-80px',
                 height: '1px',
-                transform: 'translateY(-50%)',
               }}
             />
 
