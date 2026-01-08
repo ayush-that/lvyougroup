@@ -2,34 +2,65 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Project Overview
+
+Financial Advisory Homepage - a single-page React application built with Vite, TypeScript, Tailwind CSS v4, and shadcn/ui.
+
 ## Commands
 
-- **Dev server**: `bun dev` (or `npm run dev`)
-- **Build**: `bun run build` (runs TypeScript check then Vite build)
-- **Lint**: `bun run lint`
-- **Preview production build**: `bun run preview`
+```bash
+bun install       # Install dependencies
+bun run dev       # Start development server
+bun run build     # TypeScript check + production build
+bun run lint      # ESLint
+bun run preview   # Preview production build
+```
 
 ## Architecture
 
-This is a React 19 + TypeScript application using Vite 7 as the build tool.
+### Tech Stack
+- **Runtime/Package Manager:** Bun
+- **Build:** Vite with `@tailwindcss/vite` plugin
+- **UI:** React 19, Tailwind CSS v4, shadcn/ui (new-york style)
+- **State:** Zustand for UI state only
+- **Animations:** Framer Motion, Lenis (smooth scroll)
+- **Path Alias:** `@/` maps to `src/`
 
-**Stack:**
-- React 19 with TypeScript
-- Tailwind CSS v4 (using `@tailwindcss/vite` plugin)
-- shadcn/ui components (new-york style, configured in `components.json`)
-- Lucide React for icons
+### Project Structure
 
-**Path Aliases:**
-- `@/*` maps to `./src/*`
+```
+src/
+├── components/
+│   ├── layout/      # Header, Footer
+│   ├── sections/    # Hero, Values, WhoWeServe, Stats, Services, CTA
+│   ├── common/      # SectionHeading, StatCard, NavLink, SmoothScroll, BlurOverlay
+│   └── ui/          # shadcn components (button, separator, sheet)
+├── store/           # Zustand store (ui.store.ts)
+├── lib/             # Utilities (cn function in utils.ts)
+├── types/           # TypeScript interfaces
+├── styles/          # theme.css (color tokens, typography)
+└── assets/          # Images
+```
 
-**shadcn/ui Configuration:**
-- Components: `@/components` and `@/components/ui`
-- Utilities: `@/lib/utils` (includes `cn()` helper for class merging)
-- Hooks: `@/hooks`
-- Uses CSS variables for theming with light/dark mode support
-- Base color: neutral
+### Key Patterns
 
-**CSS:**
-- Theme variables defined in `src/index.css` using OKLCH color space
-- Dark mode uses `.dark` class variant
-- Animation utilities from `tw-animate-css`
+**Component Organization:** Barrel exports via `index.ts` in each component folder. Import from folder path, not individual files.
+
+**Styling:**
+- Theme tokens defined in `src/styles/theme.css` (--bg-main, --teal-dark, --text-primary, etc.)
+- Tailwind classes reference these via `bg-bg-main`, `text-text-primary`, etc.
+- Typography uses `--font-serif` (Instrument Serif) for headings, `--font-sans` (Inter Tight) for body
+
+**State Management:** UI state (mobile nav, active service) managed via Zustand store. Access with `useUIStore` hook and selectors.
+
+**Layout:**
+- Max content width: 1280px (`.container` utility)
+- Responsive padding: `px-4` (mobile) → `px-6` (tablet) → `px-8` (desktop)
+- Section spacing: `py-16` standard, `py-24` major sections
+
+### Adding shadcn Components
+
+```bash
+bunx --bun shadcn@latest add <component>
+```
+Components install to `src/components/ui/`. Config in `components.json`.
