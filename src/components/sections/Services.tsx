@@ -15,8 +15,8 @@ export function Services() {
         {/* Header */}
         <SectionHeading
           eyebrow="What We Do"
-          title="Comprehensive financial services designed to protect, grow, and simplify your wealth."
-          subtitle="We offer a full suite of financial services—from investment management to long-term planning—built around your unique goals. Our approach is clear, structured, and designed to bring confidence to every decision."
+          title="Strategic consulting across three high-impact sectors."
+          subtitle="From payment infrastructure to blockchain applications to commodity markets—we bring deep expertise and capital access to every engagement. We don't just advise; we have the resources to help execute."
           alignment="center"
           className="max-w-3xl"
         />
@@ -54,7 +54,7 @@ export function Services() {
               <div className="aspect-[16/10] overflow-hidden rounded-lg">
                 <img
                   src={IMAGES.servicesConsultation}
-                  alt="Financial consultation"
+                  alt="Strategic consulting session"
                   className="w-full h-full object-cover"
                 />
               </div>

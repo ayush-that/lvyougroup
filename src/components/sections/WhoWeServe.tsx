@@ -12,8 +12,8 @@ export function WhoWeServe() {
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Who We Serve"
-            title="Guiding a diverse range of clients with clarity, discipline, and long-term focus"
-            subtitle="We partner with individuals, businesses, and institutions who value thoughtful planning and dependable financial guidance. Our team provides tailored strategies rooted in transparency, stability, and a deep understanding of each client's unique goals."
+            title="Partnering with forward-thinking organizations and investors"
+            subtitle="We work with enterprises building payment infrastructure, companies exploring blockchain adoption, investors seeking commodity exposure, and strategic partners looking for capital-backed consulting relationships."
             alignment="center"
             className="max-w-3xl"
           />

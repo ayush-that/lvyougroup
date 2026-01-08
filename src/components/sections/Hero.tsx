@@ -9,13 +9,12 @@ export function Hero() {
         <div className="relative mb-8 lg:mb-0">
           <div className="lg:max-w-[45%]">
             <h1 className="font-serif text-text-primary mb-6 max-w-[560px]">
-              <span className="italic">Financial Guidance That Helps You</span>
+              <span className="italic">Strategic Consulting</span>
               <br />
-              <span className="italic">Build a Stronger Future</span>
+              <span className="italic">Backed by Capital</span>
             </h1>
             <p className="text-text-muted text-lg max-w-md">
-              Transparent advice, thoughtful planning, and strategies designed
-              to protect, grow, and preserve your wealth.
+              Management consulting in payment systems, blockchain, and commodities—with the resources to execute, not just advise.
             </p>
           </div>
 
@@ -44,7 +43,7 @@ export function Hero() {
         <div className="aspect-[21/9] w-full overflow-hidden">
           <img
             src={IMAGES.hero}
-            alt="Modern architecture representing financial stability"
+            alt="Modern architecture representing strategic growth"
             className="w-full h-full object-cover"
           />
           {/* Bottom Gradient Overlay */}

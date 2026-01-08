@@ -20,9 +20,9 @@ export function CTA() {
       <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         <div className="max-w-[720px] mx-auto text-center">
           <h2 className="font-serif text-white text-4xl lg:text-5xl italic mb-8">
-            Let's Build Your Financial
+            Let's Build Something
             <br />
-            Future Together
+            Extraordinary Together
           </h2>
 
           <a href="#footer">

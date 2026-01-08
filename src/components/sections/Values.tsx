@@ -24,8 +24,8 @@ export function Values() {
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Our Core Values"
-          title="The principles that guide every decision and every strategy we build"
-          subtitle="Our values help us stay focused on delivering meaningful, long-term financial impact for every client we work with."
+          title="The principles that guide every engagement and every investment we make"
+          subtitle="We're building toward a family office because we believe in long-term partnerships over short-term transactions."
         />
 
         <div

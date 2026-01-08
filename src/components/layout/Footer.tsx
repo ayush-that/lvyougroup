@@ -27,7 +27,7 @@ export function Footer() {
                 className="text-2xl font-medium tracking-tight"
                 style={{ fontFamily: 'Georgia, serif', color: '#ffffff' }}
               >
-                LOGO
+                LVyou
               </span>
             </a>
             <p style={{ color: 'rgba(255,255,255,0.7)' }} className="text-sm leading-relaxed max-w-xs">
@@ -124,7 +124,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>
-            &copy; {currentYear} Your Company Name. All rights reserved.
+            &copy; {currentYear} LVyou Pte Ltd. All rights reserved.
           </p>
         </div>
       </div>

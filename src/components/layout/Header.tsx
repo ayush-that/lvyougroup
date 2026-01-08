@@ -28,7 +28,7 @@ export function Header() {
           {/* Logo */}
           <a href="#hero" className="flex items-center">
             <span className="font-serif text-2xl font-medium text-teal-dark tracking-tight">
-              LOGO
+              LVyou
             </span>
           </a>
 
