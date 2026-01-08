@@ -56,33 +56,10 @@ export function Stats() {
             </a>
           </div>
 
-          {/* Right Column - 2x2 Stats grid with L-shaped line */}
-          {/* Card: 200x200, Gap: 32px. Centers: top-left(100,100), bottom-left(100,332), bottom-right(332,332) */}
+          {/* Right Column - 2x2 Stats grid */}
           <div className="relative">
-            {/* L shape - Vertical line through center of left column cards, extends down */}
-            <div
-              className="hidden lg:block absolute bg-border-subtle"
-              style={{
-                left: '100px',
-                top: '100px',
-                width: '1px',
-                height: 'calc(100% + 80px)', /* from top card center, extends below */
-              }}
-            />
-
-            {/* L shape - Horizontal line at bottom, extends to right edge */}
-            <div
-              className="hidden lg:block absolute bg-border-subtle"
-              style={{
-                left: '100px',
-                bottom: '-80px',
-                width: 'calc(100% + 200px)', /* extends beyond right edge */
-                height: '1px',
-              }}
-            />
-
             {/* 2x2 Grid */}
-            <div className="relative grid grid-cols-2 gap-6 lg:gap-8 justify-items-center max-w-[450px] mx-auto lg:mx-0">
+            <div className="grid grid-cols-2 gap-6 lg:gap-8 justify-items-center max-w-[450px] mx-auto lg:mx-0">
               {STATS.map((stat) => (
                 <StatCard
                   key={stat.id}
