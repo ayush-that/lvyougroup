@@ -41,14 +41,14 @@ export function Values() {
                 key={value.id}
                 className={cn(
                   'p-6 lg:p-8 rounded-2xl',
-                  'min-h-[220px] flex flex-col justify-between',
+                  'min-h-[220px] flex flex-col lg:justify-between',
                   styles.bg,
                   styles.text
                 )}
               >
                 <h3
                   className={cn(
-                    'font-serif text-center text-3xl lg:text-4xl italic mb-6',
+                    'font-serif text-center text-3xl lg:text-4xl italic mb-4 lg:mb-6',
                     styles.text
                   )}
                 >

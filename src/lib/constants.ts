@@ -32,7 +32,7 @@ export const VALUES: ValueCard[] = [
   {
     id: 'execution-excellence',
     title: 'Execution Excellence',
-    description: 'Strategy without execution is merely theory. We bring the resources, networks, and capital to transform recommendations into results—backed by our $69M credit facility and decades of operational experience across payments, blockchain, and commodities.',
+    description: 'Strategy without execution is merely theory. We bring the resources, networks, and capital to transform recommendations into results—backed by our $69M credit facility and decades of operational experience.',
     variant: 'dark',
   },
   {
