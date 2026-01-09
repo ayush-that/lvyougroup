@@ -2,6 +2,8 @@
 
 A modern financial advisory homepage built with React, TypeScript, and Tailwind CSS.
 
+<img width="3024" height="1894" alt="image" src="https://github.com/user-attachments/assets/771524e0-b63e-436b-931b-9e795fb7f1aa" />
+
 ## Tech Stack
 
 - **React 19** with TypeScript
@@ -45,4 +47,4 @@ src/
 
 ## License
 
-Private
+MIT
